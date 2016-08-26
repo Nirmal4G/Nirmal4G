@@ -1,0 +1,117 @@
+/* Automatic dark mode, system fonts, and readable max-width */
+
+:root
+{
+	--text-color: #eee;
+	--link-color: #2af;
+	--code-color: #c5eddc;
+	--page-bg-color: #141414;
+	--visited-link-color: #c5f;
+
+	/* Ask browser to render elements like inputs & scrollbars per dark theme */
+	color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light)
+{
+	:root {
+		--text-color: #222;
+		--link-color: #06d;
+		--code-color: #456658;
+		--page-bg-color: white;
+		--visited-link-color: #91e;
+
+		color-scheme: light;
+	}
+}
+
+*
+{
+	margin: 0;
+	line-height: 1.2;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+html
+{
+	width: 100%;
+	height: 100%;
+	display: table;
+	text-size-adjust: 100%;
+}
+
+html, body, input, button, select, textarea
+{
+	font-family: system-ui, sans-serif;
+}
+
+body
+{
+	margin: 2em auto;
+	padding: calc(0.5em + 0.5vmin);
+	max-width: 40em;
+	display: table-cell;
+	vertical-align: middle;
+	color: var(--text-color);
+	background-color: var(--page-bg-color);
+
+	/* Good defaults for handling too-long words; won't help in most tables */
+	overflow-wrap: break-word;
+}
+
+body > h1
+{
+	font-family: Consolas, Inconsolata, Menlo, Monaco, ui-monospace, monospace;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: 400;
+	font-family: Cambria, Cochin, Georgia, Times, serif;
+}
+
+p
+{
+	font-style: italic;
+	font-family: Calibri, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p > b
+{
+	font-weight: 500;
+}
+
+:link
+{
+	color: var(--link-color);
+}
+
+:visited
+{
+	color: var(--visited-link-color);
+}
+
+code, tt, kbd, pre
+{
+	font-family: Consolas, Inconsolata, Menlo, Monaco, ui-monospace, monospace;
+	/* Fight famous 'code too big' problem */
+	font-size: 90%;
+	color: var(--code-color);
+}
+
+pre code, pre tt, pre kbd
+{
+	/* We don't want 90% of 90% for <pre><code> */
+	font-size: 100%;
+}
+
+@media screen and (max-width: 27em)
+{
+	body
+	{
+		font-size: 3.7vw;
+	}
+}
+
+/* End automatic dark mode, system fonts, and readable max-width */
