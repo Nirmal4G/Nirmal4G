@@ -1,0 +1,45 @@
+## Ignore Visual Studio Code/IDE temporary files.
+
+################### Common Ignores ####################
+
+# Misc
+~*
+*~
+*~.*
+
+################### Visual Studio Code Ignores ####################
+
+# Visual Studio Code cache/options directory
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+################### Visual Studio IDE Ignores ####################
+
+# Visual Studio cache/options directory
+.vs/
+
+# VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Visual Studio History (VSHistory) files
+.vshistory/
+
+# Local History for Visual Studio
+.localhistory/
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!?*.[Cc]ache/
