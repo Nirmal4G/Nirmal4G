@@ -1,0 +1,43 @@
+/* Landing Page specific styles */
+
+html
+{
+	display: table;
+}
+
+body
+{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: 400;
+}
+
+body > h1
+{
+	font-family: var(--fonts-monospace);
+}
+
+p
+{
+	font-style: italic;
+}
+
+p > b
+{
+	font-weight: 500;
+}
+
+@media screen and (max-width: 27em)
+{
+	body
+	{
+		font-size: 3.7vw;
+	}
+}
+
+/* END */
